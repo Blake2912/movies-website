@@ -14,6 +14,7 @@ import { Connection } from 'mongoose';
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
         uri: configService.get<string>('MONGODB_URI'),
+        dbName: 'sample_mflix',
         onConnectionCreate: (connection: Connection) => {
           connection.on('connected', () => console.log('connected'));
           connection.on('open', () => console.log('open'));
