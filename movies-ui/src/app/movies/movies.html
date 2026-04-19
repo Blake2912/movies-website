@@ -1,9 +1,6 @@
 <div>
   <div class="movies-container">
-    <app-movies-card></app-movies-card>
-    <app-movies-card></app-movies-card>
-    <app-movies-card></app-movies-card>
-    <app-movies-card></app-movies-card>
+    <app-movies-card *ngFor="let movie of movies" [movie]="movie"></app-movies-card>
   </div>
   <div class="movies-listing-meta-info">Showing results count of total movies</div>
   <div class="movies-load-more-button">

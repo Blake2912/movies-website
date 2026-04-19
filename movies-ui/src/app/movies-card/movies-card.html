@@ -1,10 +1,9 @@
 <div class="card">
-  <img
-    src="https://m.media-amazon.com/images/M/MV5BMTU3NjE5NzYtYTYyNS00MDVmLWIwYjgtMmYwYWIxZDYyNzU2XkEyXkFqcGdeQXVyNzQzNzQxNzI@._V1_SY1000_SX677_AL_.jpg"
-  />
+  <img [src]="movie.poster" />
   <div class="card-content">
-    <h3>Great Train robbery</h3>
-    <p>Languages: English</p>
+    <h3>{{movie.title}}</h3>
+    <p>Languages: {{ languages }}</p>
+    <p>Genres: {{ genres }}</p>
     <a href="#">Learn more</a>
   </div>
 </div>
